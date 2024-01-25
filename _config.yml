@@ -4,7 +4,7 @@
 # ---------------------------------------------------------------
 
 # Site
-title: notebook
+title: Notebook
 subtitle:
 description:
 author: xzj9458
@@ -87,7 +87,7 @@ keywords: "Jekyll, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+  since: 2024
 
 # icon between year and author @Footer
 authoricon: heart
@@ -233,7 +233,7 @@ social_icons:
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-#avatar:
+  avatar: /assets/images/avatar.gif
 
 
 # Table Of Contents in the Sidebar
@@ -407,8 +407,8 @@ wildfire:
     siteId:
   # other configs
   theme: light # or dark
-  locale: en # or other locales, e.g. zh-CN
-  defaultAvatarURL: 
+  locale: zh-CN # or other locales, e.g. zh-CN
+  defaultAvatarURL:  https://avatars.githubusercontent.com/u/105339714?v=4
 # Any question? 
 # Raise an issue here: https://github.com/cheng-kang/wildfire/issues
 # </wildfire>
