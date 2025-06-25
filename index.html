@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>健忘笔记 - 每日收留流浪知识点</title><meta name="author" content="xzj9458"><meta name="copyright" content="xzj9458"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="日拱一卒，功不唐捐。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="健忘笔记">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="健忘笔记">
+<meta property="og:description" content="日拱一卒，功不唐捐。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/butterfly-icon.png">
+<meta property="article:author" content="xzj9458">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '健忘笔记',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><span> 分类</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E5%95%86%E4%B8%9A%E7%AD%96%E7%95%A5/"><i class="fa-fw fas fa-briefcase"></i><span> 商业策略</span></a></li><li><a class="site-page child" href="/categories/%E6%80%9D%E7%BB%B4%E8%AE%A4%E7%9F%A5/"><i class="fa-fw fas fa-brain"></i><span> 思维认知</span></a></li><li><a class="site-page child" href="/categories/%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95/"><i class="fa-fw fas fa-tools"></i><span> 工具方法</span></a></li><li><a class="site-page child" href="/categories/%E9%98%85%E8%AF%BB%E5%AD%A6%E4%B9%A0/"><i class="fa-fw fas fa-book"></i><span> 阅读学习</span></a></li><li><a class="site-page child" href="/categories/%E5%88%9B%E4%BD%9C%E5%86%99%E4%BD%9C/"><i class="fa-fw fas fa-pencil-alt"></i><span> 创作写作</span></a></li><li><a class="site-page child" href="/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/"><i class="fa-fw fas fa-life-ring"></i><span> 日常生活</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page fixed" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/xzj9458/picture/83.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">健忘笔记</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><span> 分类</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E5%95%86%E4%B8%9A%E7%AD%96%E7%95%A5/"><i class="fa-fw fas fa-briefcase"></i><span> 商业策略</span></a></li><li><a class="site-page child" href="/categories/%E6%80%9D%E7%BB%B4%E8%AE%A4%E7%9F%A5/"><i class="fa-fw fas fa-brain"></i><span> 思维认知</span></a></li><li><a class="site-page child" href="/categories/%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95/"><i class="fa-fw fas fa-tools"></i><span> 工具方法</span></a></li><li><a class="site-page child" href="/categories/%E9%98%85%E8%AF%BB%E5%AD%A6%E4%B9%A0/"><i class="fa-fw fas fa-book"></i><span> 阅读学习</span></a></li><li><a class="site-page child" href="/categories/%E5%88%9B%E4%BD%9C%E5%86%99%E4%BD%9C/"><i class="fa-fw fas fa-pencil-alt"></i><span> 创作写作</span></a></li><li><a class="site-page child" href="/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/"><i class="fa-fw fas fa-life-ring"></i><span> 日常生活</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">健忘笔记</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2025/06/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86-%E7%BB%93%E6%9E%84%E5%8C%96%E6%80%9D%E8%80%83%E4%B8%8E%E8%A1%A8%E8%BE%BE-20250623/" title="金字塔原理：结构化思考与表达方法论"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/xzj9458/picture/76.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="金字塔原理：结构化思考与表达方法论"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/06/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86-%E7%BB%93%E6%9E%84%E5%8C%96%E6%80%9D%E8%80%83%E4%B8%8E%E8%A1%A8%E8%BE%BE-20250623/" title="金字塔原理：结构化思考与表达方法论">金字塔原理：结构化思考与表达方法论</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-24T16:00:00.000Z" title="发表于 2025-06-25 00:00:00">2025-06-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A1%A8%E8%BE%BE/">学习与表达</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A1%A8%E8%BE%BE/%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7/">写作技巧</a></span></div><div class="content">核心原理金字塔原理是由麦肯锡前顾问芭芭拉·明托（Barbara Minto）在《金字塔原理》一书中提出的思考、表达与写作方法，被誉为 “结构化思考和表达的圣经“。 这一方法以其清晰的层级结构和自上而下的逻辑组织方式，特别适合：  商业写作 咨询报告 学术论文 各类专业文档  金字塔原理的核心是将思想按照逻辑关系组织成金字塔形状的层级结构，确保信息传递的清晰度和说服力。  详细解析金字塔结构的基本原则1. 结论先行 核心理念：将最重要的信息（结论）放在最前面 逆向思维：先给出答案，再提供支持证据 抓住注意力：让读者立即了解文章的核心观点 设定框架：为后续内容提供理解的框架  实例基于我们的市场调研和财务分析，我们建议公司立即进入东南亚市场，优先考虑越南和泰国。 这一战略决策基于三个关键因素：  这些市场的快速增长率 较低的竞争壁垒 与我们现有供应链的协同效应  2. 自上而下的逻辑 层级组织：信息按重要性和抽象级别组织 金字塔顶端：放置核心信息或总结论 中间层级：包含支持顶层结论的关键论点 底层：提供详细证据、数据和例子  实例一份市场进入策略报告的结构：  顶层：建议进入东南亚市...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/06/19/%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AE%A4%E7%9F%A5%E5%88%86%E6%9E%90-%E4%BA%94%E7%BB%B4%E4%BA%8B%E7%89%A9%E5%88%86%E7%B1%BB%E6%A1%86%E6%9E%B6-20250619%EF%BC%88%E6%9C%80%E7%BB%88%E7%89%88%EF%BC%89/" title="构建通用事物分析框架：融合五维认知坐标系"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/xzj9458/picture/66.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="构建通用事物分析框架：融合五维认知坐标系"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/06/19/%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AE%A4%E7%9F%A5%E5%88%86%E6%9E%90-%E4%BA%94%E7%BB%B4%E4%BA%8B%E7%89%A9%E5%88%86%E7%B1%BB%E6%A1%86%E6%9E%B6-20250619%EF%BC%88%E6%9C%80%E7%BB%88%E7%89%88%EF%BC%89/" title="构建通用事物分析框架：融合五维认知坐标系">构建通用事物分析框架：融合五维认知坐标系</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-18T16:00:00.000Z" title="发表于 2025-06-19 00:00:00">2025-06-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A4%E7%9F%A5%E4%B8%8E%E6%80%9D%E7%BB%B4/">认知与思维</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A4%E7%9F%A5%E4%B8%8E%E6%80%9D%E7%BB%B4/%E6%80%9D%E7%BB%B4%E6%A8%A1%E5%9E%8B/">思维模型</a></span></div><div class="content">第一部分：核心分类维度的选择与阐述本报告旨在构建一套通用、实用的世界信息分类框架，其核心机制在于“识别类别，激活框架”，从而显著降低认知负荷，实现对陌生事物的快速、深入且有序的理解。本部分将首先阐明设计这套分类体系所遵循的核心原则，并提出五个最根本、最普适的顶层核心类别，它们将作为理解世界信息的基石。 1. 分类原则：构建通用分析框架的基石设计一个通用且实用的分类体系，需要遵循一系列核心原则，确保其不仅能够有效地组织信息，更能降低认知负荷，并直接导向行动。 通用性与普适性：跨越学科，洞察共性本框架的设计旨在超越特定学科或领域的限制，识别事物在底层结构和运作机制上的共性。这意味着无论面对自然科学、社会现象、技术产品还是抽象概念，分析者都能找到适用的切入点。通用分类系统并非追求百科全书式的穷尽，而是追求核心概念的同构性，使得不同领域的分析方法可以相互迁移。一个生物体的反馈机制与一个市场经济的供需调节机制，在系统层面上可能存在相似的结构和功能。这种跨领域的可迁移性是实现框架通用性的关键，它允许分析者将一个领域的分析经验应用于另一个陌生领域，从而极大地降低学习成本和认知负荷。 行动导向与...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">xzj9458</div><div class="author-info-description">日拱一卒，功不唐捐。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">还没想好要公告什么</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/06/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86-%E7%BB%93%E6%9E%84%E5%8C%96%E6%80%9D%E8%80%83%E4%B8%8E%E8%A1%A8%E8%BE%BE-20250623/" title="金字塔原理：结构化思考与表达方法论"><img src="https://cdn.jsdelivr.net/gh/xzj9458/picture/76.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="金字塔原理：结构化思考与表达方法论"/></a><div class="content"><a class="title" href="/2025/06/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86-%E7%BB%93%E6%9E%84%E5%8C%96%E6%80%9D%E8%80%83%E4%B8%8E%E8%A1%A8%E8%BE%BE-20250623/" title="金字塔原理：结构化思考与表达方法论">金字塔原理：结构化思考与表达方法论</a><time datetime="2025-06-24T16:00:00.000Z" title="发表于 2025-06-25 00:00:00">2025-06-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/06/19/%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AE%A4%E7%9F%A5%E5%88%86%E6%9E%90-%E4%BA%94%E7%BB%B4%E4%BA%8B%E7%89%A9%E5%88%86%E7%B1%BB%E6%A1%86%E6%9E%B6-20250619%EF%BC%88%E6%9C%80%E7%BB%88%E7%89%88%EF%BC%89/" title="构建通用事物分析框架：融合五维认知坐标系"><img src="https://cdn.jsdelivr.net/gh/xzj9458/picture/66.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="构建通用事物分析框架：融合五维认知坐标系"/></a><div class="content"><a class="title" href="/2025/06/19/%E6%96%B9%E6%B3%95%E8%AE%BA-%E8%AE%A4%E7%9F%A5%E5%88%86%E6%9E%90-%E4%BA%94%E7%BB%B4%E4%BA%8B%E7%89%A9%E5%88%86%E7%B1%BB%E6%A1%86%E6%9E%B6-20250619%EF%BC%88%E6%9C%80%E7%BB%88%E7%89%88%EF%BC%89/" title="构建通用事物分析框架：融合五维认知坐标系">构建通用事物分析框架：融合五维认知坐标系</a><time datetime="2025-06-18T16:00:00.000Z" title="发表于 2025-06-19 00:00:00">2025-06-19</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A1%A8%E8%BE%BE/"><span class="card-category-list-name">学习与表达</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A1%A8%E8%BE%BE/%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7/"><span class="card-category-list-name">写作技巧</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%A4%E7%9F%A5%E4%B8%8E%E6%80%9D%E7%BB%B4/"><span class="card-category-list-name">认知与思维</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%A4%E7%9F%A5%E4%B8%8E%E6%80%9D%E7%BB%B4/%E6%80%9D%E7%BB%B4%E6%A8%A1%E5%9E%8B/"><span class="card-category-list-name">思维模型</span><span class="card-category-list-count">1</span></a></li></ul></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%95%86%E4%B8%9A%E5%86%99%E4%BD%9C/" style="font-size: 1.1em; color: #999">商业写作</a> <a href="/tags/%E8%AE%A4%E7%9F%A5%E4%B8%8E%E6%80%9D%E7%BB%B4/" style="font-size: 1.1em; color: #999">认知与思维</a> <a href="/tags/%E7%BB%93%E6%9E%84%E5%8C%96%E6%80%9D%E8%80%83/" style="font-size: 1.1em; color: #999">结构化思考</a> <a href="/tags/%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86/" style="font-size: 1.1em; color: #999">金字塔原理</a> <a href="/tags/MECE%E5%8E%9F%E5%88%99/" style="font-size: 1.1em; color: #999">MECE原则</a> <a href="/tags/%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE/" style="font-size: 1.1em; color: #999">逻辑表达</a> <a href="/tags/%E6%80%9D%E7%BB%B4%E6%A8%A1%E5%9E%8B/" style="font-size: 1.1em; color: #999">思维模型</a> <a href="/tags/%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/" style="font-size: 1.1em; color: #999">分析框架</a> <a href="/tags/%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7/" style="font-size: 1.1em; color: #999">写作技巧</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A1%A8%E8%BE%BE/" style="font-size: 1.1em; color: #999">学习与表达</a> <a href="/tags/%E8%AE%A4%E7%9F%A5%E5%B7%A5%E5%85%B7/" style="font-size: 1.1em; color: #999">认知工具</a> <a href="/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/" style="font-size: 1.5em; color: #99a9bf">方法论</a> <a href="/tags/%E9%80%9A%E7%94%A8%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6/" style="font-size: 1.1em; color: #999">通用分析框架</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              六月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">9.4k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-06-25T12:24:33.163Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;2025 By xzj9458</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.0-b2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["日拱一卒，功不唐捐！"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["日拱一卒，功不唐捐！"])
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
